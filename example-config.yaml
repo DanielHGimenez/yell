@@ -1,0 +1,5 @@
+# Change this file name to "config.yaml" if you want to use it.
+
+# Use the file specified in the sound_path when playing sounds.
+# Only MP3 files are fully supported, but other formats may work.
+sound_path: /path/to/sound/file.mp3
