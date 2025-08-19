@@ -20,10 +20,10 @@ var RootCmd = &cobra.Command{
 
 Never waste time manually watching tasks again! Yell monitors:
 ✅ Commands – Get notified when a long-running command finishes.
-✅ Processes – Know when a background process exits.
-✅ Dynamic Output – Detect changes in command output (great for waiting on conditions).
+✅ Processes – Get notified when a process exits.
 
 Just set it and forget it—get a notification when it’s done. 🚀`,
+// IN PROGRESS ✅ Dynamic Output – Detect changes in command output (great for waiting on conditions).
 
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
