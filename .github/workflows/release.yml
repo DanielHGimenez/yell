@@ -33,6 +33,11 @@ jobs:
           make build-release
           make assembly-release-packages
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: build/release/package
+
   release:
 
     runs-on: ubuntu-latest
@@ -43,6 +48,13 @@ jobs:
       contents: write
 
     steps:
+
+    - uses: actions/checkout@v4
+
+    - uses: actions/download-artifact@v4
+      with:
+        name: packages
+        path: build/release/package
 
     - name: Release on Github
       uses: softprops/action-gh-release@v2
