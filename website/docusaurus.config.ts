@@ -34,7 +34,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pt'],
+    locales: ['en'],
   },
 
   presets: [
@@ -98,7 +98,7 @@ const config: Config = {
         {
           type: 'docsVersionDropdown',
           position: 'right',
-          dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          // dropdownItemsAfter: [{to: 'versions', label: 'All versions'}],
           dropdownActiveClassDisabled: true,
         },
         {
@@ -116,7 +116,7 @@ const config: Config = {
           items: [
             {
               label: 'Quickstart',
-              to: '/docs/quickstart',
+              to: 'docs/quickstart/overview',
             },
           ],
         },
