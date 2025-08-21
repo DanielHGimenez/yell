@@ -17,8 +17,9 @@ build-release:
 	#GOOS=linux GOARCH=386 go build -ldflags "-s -w" -o ./build/release/bin/yell-386-linux ./src/main.go # 32-bit
 
 assembly-release-packages:
-	zip -j yell-win-x64 ./build/release/bin/yell-amd64.exe notification.mp3 example-config.yaml
-	zip -j yell-win-x86 ./build/release/bin/yell-386.exe notification.mp3 example-config.yaml
-	zip -j yell-darwin-x64 ./build/release/bin/yell-amd64-darwin notification.mp3 example-config.yaml
-	zip -j yell-darwin-arm64 ./build/release/bin/yell-arm64-darwin notification.mp3 example-config.yaml
-	zip -j yell-linux-x64 ./build/release/bin/yell-amd64-linux notification.mp3 example-config.yaml
+	mkdir -p ./build/release/package
+	zip -j ./build/release/package/yell-win-x64 ./build/release/bin/yell-amd64.exe notification.mp3 example-config.yaml
+	zip -j ./build/release/package/yell-win-x86 ./build/release/bin/yell-386.exe notification.mp3 example-config.yaml
+	zip -j ./build/release/package/yell-macos-intel-x64 ./build/release/bin/yell-amd64-darwin notification.mp3 example-config.yaml
+	zip -j ./build/release/package/yell-macos-silicon-arm64 ./build/release/bin/yell-arm64-darwin notification.mp3 example-config.yaml
+	zip -j ./build/release/package/yell-linux-x64 ./build/release/bin/yell-amd64-linux notification.mp3 example-config.yaml
