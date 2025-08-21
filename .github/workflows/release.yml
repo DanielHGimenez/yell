@@ -70,5 +70,6 @@ jobs:
           ./build/release/package/yell-macos-silicon-arm64.zip
           ./build/release/package/yell-linux-x64.zip
 
-    - name: Deploy to Github Pages
-      uses: ./.github/workflows/deploy-docs.yml
+  deploy-github-pages:
+    name: Deploy to Github Pages
+    uses: ./.github/workflows/deploy-docs.yml
