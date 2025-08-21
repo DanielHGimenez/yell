@@ -1,4 +1,4 @@
-name: Release CI
+name: Release
 
 on:
   workflow_dispatch:
@@ -20,28 +20,41 @@ on:
         type: string
 
 jobs:
-  release:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Build source code
-      run: |
-        sudo apt install libasound2-dev -y
-        make build-release
-        make assembly-release-packages
+      - name: Build packages
+        run: |
+          sudo apt install libasound2-dev -y
+          make build-release
+          make assembly-release-packages
 
-    - name: Release
+  release:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+
+    - name: Release on Github
       uses: softprops/action-gh-release@v2
       with:
         name: ${{ inputs.version }}
         tag_name: ${{ inputs.version }}
         body: ${{ inputs.description }}
+        make_latest: true
         files: |
-          yell-win-x64.zip
-          yell-win-x86.zip
-          yell-darwin-x64.zip
-          yell-darwin-arm64.zip
-          yell-linux-x64.zip
+          ./build/release/package/yell-win-x64.zip
+          ./build/release/package/yell-win-x86.zip
+          ./build/release/package/yell-macos-intel-x64.zip
+          ./build/release/package/yell-macos-silicon-arm64.zip
+          ./build/release/package/yell-linux-x64.zip
+
+    - name: Deploy to Github Pages
+      uses: ./.github/workflows/deploy-docs.yml
