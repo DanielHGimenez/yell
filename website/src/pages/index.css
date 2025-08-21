@@ -1,0 +1,95 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.heroBanner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroBanner img {
+  max-height: 200px;
+}
+
+.heroBanner .hero__title {
+  font-size: 2rem;
+}
+
+/* [data-theme='dark'] .heroBanner img { */
+  /* -webkit-filter: drop-shadow(5px 5px 5px #e78441);
+  filter: drop-shadow(5px 5px 5px #e78441); */
+  /* -webkit-filter: drop-shadow(0px 0px 15px #e78441);
+  filter: drop-shadow(0px 0px 15px #e78441); */
+/* } */
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.heroFeatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-top: 2rem; */
+  max-width: 60%;
+  text-wrap: wrap;
+}
+
+.heroFeatures ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroFeatures ul li {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: rgba(41, 151, 100, 0.1);
+  color: #299764;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.heroFeatures ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.heroFeatures ul li .lucide-badge-check {
+  margin-right: .5em;
+  /* width: 2.5em;
+  height: 2.5em; */
+}
+
+.heroFeatures ul li .lucide-badge-check .badge {
+  stroke: #299764;
+}
+
+.heroFeatures ul li.lucide-badge-check .check {
+  stroke: #299764;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.buttons .button:not(:last-child) {
+  margin-right: 12px;
+}
