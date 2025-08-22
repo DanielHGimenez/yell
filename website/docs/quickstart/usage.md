@@ -132,10 +132,7 @@ Only one of the flags can be used at a time. If all three flags are specified, Y
 
 It's possible to use alerts without using monitoring.
 
-Examples:
+Example:
 ```sh
 sleep 5 && yell --sound
-```
-```sh
-sleep 5 || yell --sound
 ```
