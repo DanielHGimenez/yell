@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # Overview
 
-Yell is a command-line tool that alerts you when a task completes, so you can focus on what matters.
+Yell is a command-line tool that alerts you when a software execution finishes, so you can focus on what matters.
 
-## What tasks?
+## What software executions?
 
-Yell can handle following types of tasks:
+Yell can handle following types of software executions:
 
 - Commands: Execute commands and alert you when it finishes. 
-- Processes: Alert you when a process exits/die.
+- Processes: Alert you when a process exits/dies.
 
 ## What alerts?
 

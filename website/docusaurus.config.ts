@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Yell',
-  tagline: 'A smart command-line tool that alerts you when a task completes, so you can focus on what matters.',
+  tagline: 'A smart command-line tool that alerts you when a software execution finishes, so you can focus on what matters.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
