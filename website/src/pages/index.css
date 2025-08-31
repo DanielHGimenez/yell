@@ -3,6 +3,8 @@
  * and scoped locally.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -22,8 +24,19 @@
 }
 
 .heroBanner .hero__title {
-  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.1rem;
 }
+
+.heroBanner .hero__subtitle {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* [data-theme='dark'] .heroBanner img { */
   /* -webkit-filter: drop-shadow(5px 5px 5px #e78441);
@@ -42,13 +55,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-top: 2rem; */
+  margin-top: 2rem;
   max-width: 60%;
   text-wrap: wrap;
 }
 
 .heroFeatures ul {
   list-style: none;
+  list-style-position: outside;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -60,26 +74,29 @@
   align-items: center;
   padding: 4px 8px;
   background-color: rgba(41, 151, 100, 0.1);
-  color: #299764;
+  /* color: #299764; */
   border-radius: 8px;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .heroFeatures ul li:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: .5rem;
 }
 
 .heroFeatures ul li .lucide-badge-check {
-  margin-right: .5em;
-  /* width: 2.5em;
-  height: 2.5em; */
+  margin-right: .3em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .heroFeatures ul li .lucide-badge-check .badge {
   stroke: #299764;
 }
 
-.heroFeatures ul li.lucide-badge-check .check {
+.heroFeatures ul li .lucide-badge-check .check {
   stroke: #299764;
 }
 

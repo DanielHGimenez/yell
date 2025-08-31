@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Yell',
-  tagline: 'A smart command-line tool that alerts you when a software execution finishes, so you can focus on what matters.',
+  tagline: 'Yell was built to help tech professionals make better use of their time. Instead of manually checking long-running tasks\u2014like test suites, CI/CD pipelines, or any other process that keeps you waiting\u2014let Yell notify you when they\'re done. Skip the boring part and stay focused on what really matters.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

@@ -19,7 +19,7 @@ function HomepageHeader() {
         <p className="hero__title">{siteConfig.tagline}</p>
         <div className={clsx('heroFeatures')}>
           <p className="hero__subtitle">
-            Never waste time manually watching tasks again! Yell monitors:
+            Features:
           </p>
           <ul>
             <li><BadgeCheck/> Commands – Get notified when a long-running command finishes.</li>
