@@ -47,7 +47,7 @@ To use WhatsApp alerts, you need to configure your WhatsApp API credentials exec
 yell config whatsapp
 ```
 It will show a QR code that you need to scan with your WhatsApp to authenticate the API access.<br/>
-It only need to be done once.
+The credentials will be stored in your machine, and it only needs to be done once.
 :::
 
 ## Command Monitoring
