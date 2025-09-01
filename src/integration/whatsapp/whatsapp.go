@@ -2,9 +2,11 @@ package whatsapp
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 
+	"github.com/DanielHGimenez/yell/src/config"
 	"github.com/mdp/qrterminal/v3"
 	_ "github.com/ncruces/go-sqlite3/driver"
 	_ "github.com/ncruces/go-sqlite3/embed"
@@ -17,9 +19,10 @@ import (
 )
 
 const (
-	databaseFile    = "file:wppstore.db?_foreign_keys=on"
-	whatsappLogFile = "whatsapp_db.log"
-	clientLogFile   = "whatsapp_client.log"
+	databaseFileName       = "wppstore.db"
+	databaseFilePathFormat = "file:%s?_foreign_keys=on"
+	whatsappLogFile        = "whatsapp_db.log"
+	clientLogFile          = "whatsapp_client.log"
 )
 
 func CreateClient() (*whatsmeow.Client, error) {
@@ -28,7 +31,11 @@ func CreateClient() (*whatsmeow.Client, error) {
 		return nil, err
 	}
 	ctx := context.Background()
-	container, err := sqlstore.New(ctx, "sqlite3", databaseFile, dbLog)
+	userDatabaseFile, err := config.GetFilePathInExecutableFolder(databaseFileName)
+	if err != nil {
+		return nil, err
+	}
+	container, err := sqlstore.New(ctx, "sqlite3", fmt.Sprintf(databaseFilePathFormat, userDatabaseFile), dbLog)
 	if err != nil {
 		return nil, err
 	}
