@@ -22,7 +22,7 @@ var whatsappCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal("could not login to whatsapp: ", err)
 		}
-		time.Sleep(1 * time.Second) // Wait for the client to connect
+		time.Sleep(5 * time.Second) // Wait for the client to connect
 	},
 }
 

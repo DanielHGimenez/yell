@@ -78,7 +78,7 @@ func Login(client *whatsmeow.Client) error {
 }
 
 func GetGroupByName(client *whatsmeow.Client, groupName string) *types.JID {
-	info, err := client.GetJoinedGroups()
+	info, err := client.GetJoinedGroups(context.Background())
 	if err != nil {
 		log.Fatal("could not check if the channels exists:", err)
 	}
